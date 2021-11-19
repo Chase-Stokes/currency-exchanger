@@ -10,14 +10,25 @@
     <h3>Convert your USD to these 5 currencys!</h3>
   </div>
   <br>
-  <select class="selectForm" id="pickCurrency">
-    <option value=""></option>
-    <option value=""></option>
-    <option value=""></option>
-    <option value=""></option>
-    <option value=""></option>
-  </select>
-  <br>
+  <div id="box2">
+    <form id="formOne">
+      <label for=usdToConvert>Enter amount of USD to convert:</label>
+        <input type="number" id="USD" name="usdToConvert">
+        <label for="selectCurrency">Convert into:</label>
+        <select class="selectForm" id="pickCurrency" name="selectCurrency">
+          <option value="JPY">Japenese Yen</option>
+          <option value="EUR">European Euro</option>
+          <option value="AUD">Australian Dollar</option>
+          <option value="DKK">Danish Krone</option>
+          <option value="LKR">Sri Lankan Rupee</option>
+        </select>
+        <br>
+        <button id="btnOne" type="submit" class="btn btn-dark">Convert</button>
+        <br>
+    </form>
+    <h3 id="cExOutput"></h3>
+  </div>
+  
   
 </div> 
 </body>
