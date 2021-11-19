@@ -15,7 +15,10 @@ function conversionRate(response){
 $(document).ready(function() {
   $('#formOne').submit(function(event) {
     event.preventDefault();
+    let userInput = $("#USD").val();
+    console.log(userInput);
     let currency = $('#pickCurrency').val();
+    console.log(currency);
     curEx.currencyEx(currency)
       .then(function(response) {
         conversionRate(response);
