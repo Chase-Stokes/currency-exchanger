@@ -6,7 +6,7 @@ import curEx from './c-ex.js';
 
 function conversionRate(response){
   let currency1 = $('#pickCurrency').val();
-  if (response.base_code === currency1){
+  if (response.base_code[0] === currency1){
     return $("#cExOutput").text(`The Conversion Rate you have chosen is ${response.amount}` );
   }else {
     $('#cExOutput').text(`There was an ERROR.`);
