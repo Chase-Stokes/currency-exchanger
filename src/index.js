@@ -5,8 +5,9 @@ import './css/styles.css';
 import curEx from './c-ex.js';
 
 function conversionRate(response){
-  if (response.conversion_rates){
-    return $("#cExOutput").text(`The Conversion Rate you have chosen is ${response.conversion_rates}` );
+  let currency1 = $('#pickCurrency').val();
+  if (response.base_code === currency1){
+    return $("#cExOutput").text(`The Conversion Rate you have chosen is ${response.amount}` );
   }else {
     $('#cExOutput').text(`There was an ERROR.`);
   }
